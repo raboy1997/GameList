@@ -1,0 +1,170 @@
+body {
+	padding: 20px 2% 50px;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	background-color: #fbfbfb;
+}
+
+.big-title a {
+	color: #11d0f1;
+	font-weight: normal;
+	text-decoration: none;
+	position: relative;
+}
+
+.big-title a:hover:after {
+	content: "✚";
+	position: absolute;
+	top: -4px;
+	left: 139px;
+}
+
+.big-title {
+	text-align: center;
+}
+
+dl {
+	text-align: left;
+	margin-bottom: 28px;
+	overflow: hidden;
+}
+
+dd {
+	margin: 0 0 5px;
+}
+
+dt {
+	font-weight: bold;
+	float: left;
+	margin-right: 4px;
+}
+
+.m-logo {
+	max-height: 120px;
+	max-width: 200px;
+}
+
+.marks-list {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.mark {
+	text-align: center;
+	border: 1px solid #b1b1b1;
+	width: 300px;
+	padding: 0 25px 25px;
+	margin: 30px 0 0 30px;
+	box-shadow: 0px 0px 0px #fff, inset 0px 0px 12px -3px #000;
+	transition: all 250ms ease-out;
+	border-radius: 10px;
+	background-color: #F0F0F0;
+	position: relative;
+}
+
+.mark:hover {
+	box-shadow: 0px 0px 18px -4px #000, inset 0px 0px 0px #fff;
+	transition: all 70ms ease-out;
+	background-color: #fff;
+}
+
+.mark dd a {
+	color: #000;
+}
+
+.operation {
+	border-top: 2px dotted #dcdcdc;
+	position: absolute;
+	bottom: 0px;
+	left: 5%;
+	right: 5%;
+	display: block;
+	box-sizing: border-box;
+	padding: 8px 0 10px 0;
+	display: none;
+}
+
+.mark:hover .operation {
+	display: block;
+}
+
+#add-mark-form {
+	width: 650px;
+	margin: 0 auto;
+}
+
+.input-group {
+	clear: both;
+	text-align: right;
+	line-height: 45px;
+}
+
+label {
+	float: left;
+	padding-right:10px;
+}
+
+input[type='submit']:hover,
+.submit:hover {
+	box-shadow: 4px 4px 10px -5px #000;
+	cursor: pointer;
+}
+
+input,
+textarea,
+.submit {
+	outline:none;
+	padding:10px;
+	margin:5px 15px;
+	border-radius:5px;
+	border:1px solid #ccc;
+	transition: 200ms;
+}
+
+textarea,
+input {
+	width: 450px;
+	resize: none;
+}
+
+input[type='submit'],
+.submit {
+	background-color: #dddddd;
+	text-decoration: none;
+	color: #000;
+	width: 200px;
+	font-size: 16px;
+}
+
+input[type='submit'] {
+	background-color: #92ffaf;
+}
+
+.center-align {
+	text-align: center;
+}
+
+.edit,
+.remove {
+	text-decoration: none;
+	margin: 40px;
+}
+
+.edit {
+	color: #17da0b;
+}
+
+.remove {
+	color: #FF2711;
+}
+
+.sort-menu {
+	text-align: center;
+}
+
+.sort-menu a {
+	margin: 0 2px;
+	color: #000;
+}

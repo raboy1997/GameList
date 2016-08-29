@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel='stylesheet' href='/stylesheets/style.css'/>
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+		<script src="/javascripts/main.js"></script>
+	</head>
+	<body>
+		<header class="container">
+			<h1 class="big-title">Update mark</h1>
+		</header>
+		<section id="mark-add" class="container">
+			<form id="add-mark-form" name="add-mark-form" method="POST" action="/edit/update/<%= mark['_id'] %>">
+				<div class="input-group">
+					<label>Brand name</label>
+					<input type="text" class="form-control" name="name" palceholder="Name" value="<%= mark.name %>" required/>
+				</div>
+
+				<div class="input-group">
+					<label>Brand logo</label>
+					<input type="url" class="form-control" name="logo" palceholder="picture url" value="<%= mark.logo %>"/>
+				</div>
+
+				<div class="input-group">
+					<label>Founded</label>
+					<input type="text" class="form-control" name="founded" palceholder="picture url" value="<%= mark.founded %>"/>
+				</div>
+
+				<div class="input-group">
+					<label>Brand country</label>
+					<input type="text" class="form-control" name="country" palceholder="country" value="<%= mark.country %>"/>
+				</div>
+
+				<div class="input-group">
+					<label>Price</label>
+					<input type="text" class="form-control" name="price" palceholder="price" value="<%= mark.price %>"/>
+				</div>
+
+				<div class="input-group">
+					<label>Website</label>
+					<input type="url" class="form-control" name="website" value="<%= mark.website %>"></input>
+				</div>
+
+				<div class="input-group">
+					<label>About</label>
+					<textarea rows="10" class="form-control" name="about"><%= mark.about %></textarea>
+				</div>
+
+				<div class="center-align">
+					<input type="submit" value="✎ Update mark">
+					<a class="submit" href="/">&#9668; Back to mark list</a>
+				</div>
+				
+			</form>
+		</section>
+	</body>
+</html>

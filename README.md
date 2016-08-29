@@ -1,3 +1,1 @@
-# mark-list
-# javascript-
 # GameList

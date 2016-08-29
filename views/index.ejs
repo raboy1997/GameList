@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Marks list</title>
+		<link rel='stylesheet' href='/stylesheets/style.css' />
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+		<script src="/javascripts/main.js"></script>
+	</head>
+	<body>
+		<h1 class="big-title">Trademarks list <a href="/add-mark">(add mark)</a></h1>
+		<aside class="sort-menu">
+			<span>Sort by:</span>
+			<a href="/sort/name">name</a>↓
+			<a href="/sort/founded">founded</a>↓
+			<a href="/sort/price">price</a>↓
+			<a href="/sort/country">country</a>↓
+		</aside>
+		<ul class="marks-list">
+			<% for(var i=0; i<marks.length; i++) {%>
+			<li class="mark">
+				<h2><%= marks[i].name %></h2>
+				<img class="m-logo" src="<%= marks[i].logo %>" alt="<%= marks[i].name %>">
+				<dl data-mark-id="<%= marks[i]._id %>">
+					<dt>Founded:</dt>
+					<dd><%= marks[i].founded %></dd>
+					<dt>Price:</dt>
+					<dd>$<%= marks[i].price %> billions</dd>
+					<dt>Country:</dt>
+					<dd><%= marks[i].country %></dd>
+					<dt>Web-site:</dt>
+					<dd><a href="<%= marks[i].website %>"><%= marks[i].website %></a></dd>
+					<dt>About:</dt>
+					<dd><%= marks[i].about %></dd>
+				</dl>
+				<div class="operation">
+					<a class="remove" href="/remove/<%= marks[i]['_id'] %>">✖ remove</a>
+					<a class="edit" href="/edit/<%= marks[i]['_id'] %>">✎ edit</a>
+				</div>
+				
+			</li>
+			<% } %>
+		</ul>
+	</body>
+</html>
